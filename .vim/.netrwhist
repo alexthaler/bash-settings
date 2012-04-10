@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Users/laughingman234/Projects/orbitz-host-tbs-retail-air-mac/host-tbs-shop'
-let g:netrw_dirhist_2='/opt/orbitz/reference/data2'
-let g:netrw_dirhist_3='/opt/orbitz/config/orbitz-host-tbs_28.25'
