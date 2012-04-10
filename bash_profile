@@ -2,6 +2,7 @@ alias etet='echo this is a test'
 alias python='python2.5'
 alias webopen='open -a Google\ Chrome'
 alias ls='ls -G'
+alias ll='ls -l'
 
 source ~/BashPlugins/git-completion.bash
 
