@@ -4,6 +4,10 @@ alias webopen='open -a Google\ Chrome'
 alias ls='ls -G'
 alias ll='ls -l'
 
+if [ -n "${SSH_CLIENT}" -a "${USER}" = "athaler" ]; then
+    screen -r sshsession
+fi
+
 source ~/BashPlugins/git-completion.bash
 
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
