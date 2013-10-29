@@ -3,6 +3,7 @@ alias ls='ls -G'
 alias ll='ls -l'
 
 source ~/BashPlugins/git-completion.bash
+source ~/BashPlugins/accuity-envs.bash
 
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
