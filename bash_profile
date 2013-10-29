@@ -1,4 +1,5 @@
-alias etet='echo this is a test'
+alias subl='open -a /Applications/Sublime\ Text\ 2.app/'
+alias ls='ls -G'
 alias ll='ls -l'
 
 source ~/BashPlugins/git-completion.bash
