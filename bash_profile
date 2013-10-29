@@ -1,12 +1,5 @@
 alias etet='echo this is a test'
-alias python='python2.5'
-alias webopen='open -a Google\ Chrome'
-alias ls='ls -G'
 alias ll='ls -l'
-
-if [ -n "${SSH_CLIENT}" -a "${USER}" = "athaler" ]; then
-    screen -r sshsession
-fi
 
 source ~/BashPlugins/git-completion.bash
 
@@ -39,23 +32,3 @@ function _prompt_command() {
 
 PROMPT_COMMAND=_prompt_command
 
-##
-# Your previous /Users/laughingman234/.bash_profile file was backed up as /Users/laughingman234/.bash_profile.macports-saved_2011-03-16_at_14:46:46
-##
-
-# MacPorts Installer addition on 2011-03-16_at_14:46:46: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
-export PATH=~/scala/bin:$PATH
-export AC_DIFF_CLI="vimdiff %1 %2"
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
-
-
-# Setting PATH for MacPython 2.5
-# The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/Current/bin:${PATH}"
-PATH="~/go/bin:${PATH}"
-PATH="/Developer/usr/bin:${PATH}"
-PATH="~/Frameworks/play-2.0:${PATH}"
-export PATH
