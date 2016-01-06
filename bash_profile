@@ -1,9 +1,22 @@
-alias subl='open -a /Applications/Sublime\ Text\ 2.app/'
+# .bash_profile
+
+# User specific environment and startup programs
+
+export JAVA_HOME=$(/usr/libexec/java_home)
+export GOPATH=$HOME/go
+
+PATH=$PATH:$JAVA_HOME/bin
+PATH=$PATH:$GOPATH/bin
+PATH=$PATH:$HOME/bin
+
 alias ls='ls -G'
 alias ll='ls -l'
+alias subl='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
 
 source ~/BashPlugins/git-completion.bash
-source ~/BashPlugins/accuity-envs.bash
+
+complete -W "$(echo `cat ~/.ssh/known_hosts | cut -f 1 -d ' ' | sed -e s/,.*//g | uniq | grep -v "\["`;)" ssh
+complete -W "$(echo `cat ~/.ssh/known_hosts | cut -f 1 -d ' ' | sed -e s/,.*//g | uniq | grep -v "\["`;)" scp
 
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
@@ -29,7 +42,7 @@ function _git_prompt() {
 }
 
 function _prompt_command() {
-    PS1="`_git_prompt`"'\$\h \t \W ➙ \[\e \[\e[0m\]'
+    PS1="`_git_prompt`"'\$\h \t \W |$ '
 }
 
 PROMPT_COMMAND=_prompt_command
